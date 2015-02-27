@@ -1,9 +1,49 @@
 ---
 # vars file for zenodo
+# Most information taken from https://github.com/invenio/invenio
 mysql_dir:
   - ['RedHat': "/etc/mysql"]
   - ["Debian", "/etc/mysql"]
+
 invenio:
   - repo: https://github.com/AAROC/invenio
+  - yum_requirements:
+    - automake
+    - file
+    - freetype-devel
+    - gcc
+    - gcc-c++
+    - gettext
+    - gettext-devel
+    - git
+    - hdf5-devel
+    - ipython
+    - libpng-devel
+    - libxslt-devel
+    - libreoffice
+    - libreoffice-headless
+    - libreoffice-pyuno
+    - mod_ssl
+    - mod_wsgi
+    - mysql-devel
+    - mysql-server
+    - poppler-utils
+    - python-devel
+    - python-magic
+    - python-pip
+    - redis
+    - sendmail
+    - sudo
+    - texlive
+    - unzip
+    - w3m
+    - wget
+    
+  - npm_requirements:
+    - less@1.7.5
+    - clean-css
+    - requirejs
+    - uglify-js
+    - bower
 zenodo:
   - repo: https://github.com/AAROC/zenodo

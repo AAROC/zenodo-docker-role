@@ -1,6 +1,8 @@
 ---
 - name: Clone the Invenio repo
+  sudo: true
   git: repo={{ invenio.repo }} dest=invenio
 
 - name: Clone the Zenodo repo
-  git: repo={{ zenodo.repo }}
+  sudo: true
+  git: repo={{ zenodo.repo }} dest=zenodo
