@@ -1,0 +1,2 @@
+---
+- copy: src=etc/my.cnf dest={{ mysql_dir }}

@@ -1,2 +1,3 @@
 ---
 # tasks file for zenodo
+- include: mysql.yml
