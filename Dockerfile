@@ -1,7 +1,7 @@
 # Docker file for Zenodo from
 # https://github.com/zenodo/zenodo/blob/master/INSTALL.rst
 
-FROM ubuntu:1410
+FROM ubuntu:14.10
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
 RUN apt-get -y update
 RUN apt-get -y install build-essential git redis-server \
