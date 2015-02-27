@@ -1,0 +1,11 @@
+---
+- name: Create ansible user
+  sudo: true
+  sudo_user: root
+  user:
+    - name: ansible
+    - shell: /bin/bash
+    - groups: wheel
+    - generate_ssh_key: true
+    - state: present
+    - comment: "Ansible user created by ansible"

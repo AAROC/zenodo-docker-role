@@ -1,2 +1,9 @@
 ---
 # vars file for zenodo
+mysql_dir:
+  - ['RedHat': "/etc/mysql"]
+  - ["Debian", "/etc/mysql"]
+invenio:
+  - repo: https://github.com/AAROC/invenio
+zenodo:
+  - repo: https://github.com/AAROC/zenodo

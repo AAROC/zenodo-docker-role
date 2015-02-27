@@ -1,2 +1,4 @@
 ---
-- copy: src=etc/my.cnf dest={{ mysql_dir }}
+- name: Configure Mysql
+- copy: src=etc/my.cnf dest={{ mysql_dir.ansible_os_family }}/my.cnf
+# Might need to restart mysql
