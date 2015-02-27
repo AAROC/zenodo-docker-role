@@ -1,7 +1,7 @@
 # Docker file for Zenodo from
 # https://github.com/zenodo/zenodo/blob/master/INSTALL.rst
+FROM centos:6
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
-FROM centos:centos6
 # We prepare the machine for ansble
 RUN yum clean all && \
     yum -y install epel-release && \
