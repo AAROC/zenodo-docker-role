@@ -1,0 +1,10 @@
+---
+language: bash
+before_install:
+- echo $PWD
+install:
+- echo "hi"
+notifications:
+  email:
+    recipients:
+    - brucellino@gmail.com
