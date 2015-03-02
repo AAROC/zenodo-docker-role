@@ -15,3 +15,6 @@ RUN git submodule update --init
 ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
+
+RUN git clone https://github.com/brucellino/zenodo-docker-role.git 
+RUN ansible -i inventory zenodo.yml
