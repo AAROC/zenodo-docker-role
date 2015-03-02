@@ -7,7 +7,7 @@ This is the Ansible role for deploying Zenodo using Docker containers.
 Requirements
 ------------
 
-This role requires containers. It is not explicitly stated yet since we don't have the roles for those containers. The dependencies for Zenodo are expressed within this role.
+None. This repository is designed to run inside a Docker container, which is described by the Dockerfile included.
 
 Role Variables
 --------------
