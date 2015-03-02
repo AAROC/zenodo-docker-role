@@ -12,7 +12,15 @@ This role requires containers. It is not explicitly stated yet since we don't ha
 Role Variables
 --------------
 
-none yet.
+There are several variables in the role:  
+
+  * OS dependencies (for CentOS and Debian)
+  * npm dependencies
+  * pip dependencies
+  * invenio and zenodo repositories and variables
+  * OS-dependent mysql config directory (for CentOS and Debian)
+
+These are all in vars/main.yml
 
 Dependencies
 ------------
@@ -22,11 +30,14 @@ none
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+The playbook is designed to be executed on localhost, there is usally only one host affected , so you can run ansible with the local connection:
 
-    - hosts: servers
+```
+---
+    - hosts: localhost
       roles:
          - zenodo-docker-role
+```
 
 License
 -------
