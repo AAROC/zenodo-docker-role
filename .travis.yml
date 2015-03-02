@@ -6,8 +6,8 @@ before_install:
 # We need to install Ansible
 - sudo apt-get clean all && sudo apt-get -y update
 - sudo apt-get install -y python-yaml python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
-- mkdir /etc/ansible/
-- echo '[local]\nlocalhost\n' > /etc/ansible/hosts
+- sudo mkdir /etc/ansible/
+- sudo echo '[local]\nlocalhost\n' > /etc/ansible/hosts
 - sudo mkdir /opt/ansible/
 - sudo git clone --recursive https://github.com/ansible/ansible.git /opt/ansible/ansible
 - cd /opt/ansible/ansible
