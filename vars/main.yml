@@ -3,7 +3,7 @@
 # Most information taken from https://github.com/invenio/invenio
 mysql_dir:
   - ['RedHat': "/etc/mysql"]
-  - ["Debian", "/etc/mysql"]
+  - ['Debian': "/etc/mysql"]
 
 invenio:
   - repo: https://github.com/AAROC/invenio
@@ -38,12 +38,28 @@ invenio:
     - unzip
     - w3m
     - wget
-    
+
   - npm_requirements:
     - less@1.7.5
     - clean-css
     - requirejs
     - uglify-js
     - bower
+  - apt_requirements:
+    - build-essential
+    - git
+    - redis-server
+    - libmysqlclient-dev
+    - libxml2-dev
+    - libxslt-dev
+    - libjpeg-dev
+    - libfreetype6-dev
+    - libtiff-dev
+    - libffi-dev
+    - libssl-dev
+    - software-properties-common
+    - python-dev
+    - virtualenvwrapper
+    - subversion
 zenodo:
   - repo: https://github.com/AAROC/zenodo

@@ -20,4 +20,13 @@
     - state: present
 
 - name: Install prerequisites (CentOS)
-  yum: name={{ }}
+  yum: name={{ item }}
+  with_item:
+    - {{ invenio.yum_requirements }}
+  when: ansible_os_family == 'CentOS'
+
+- name: Install prerequisites (Debian)
+  apt: name={{ item }}
+  with_item:
+    - {{ invenio.apt_requirements }}
+  when: ansible_os_family == 'Debian'

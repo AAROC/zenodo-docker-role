@@ -3,3 +3,5 @@
 - include: prerequisites.yml
 - include: mysql.yml
 - include: source.yml
+- include: install.yml
+#- include: 
