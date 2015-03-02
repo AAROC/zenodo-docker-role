@@ -1,0 +1,6 @@
+# From https://github.com/zenodo/zenodo/blob/production/INSTALL.rst#35-assets
+---
+- name: Install npm assets
+  npm:
+    name: {{ item }}
+    

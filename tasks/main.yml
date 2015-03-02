@@ -4,4 +4,4 @@
 - include: mysql.yml
 - include: source.yml
 - include: install.yml
-- include: configuration.yml
+- include: assets.yml
