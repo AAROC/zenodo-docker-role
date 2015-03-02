@@ -11,8 +11,7 @@ before_install:
 - sudo mkdir /opt/ansible/
 - sudo git clone --recursive https://github.com/ansible/ansible.git /opt/ansible/ansible
 - cd /opt/ansible/ansible
-- sudo git submodule update --inits
-
+- sudo git submodule update --init
 env:
   - PATH=/opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin:$PATH PYTHONPATH=/opt/ansible/ansible/lib:$PYTHONPATH ANSIBLE_LIBRARY=/opt/ansible/ansible/library
 install:
