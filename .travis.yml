@@ -1,11 +1,11 @@
 ---
+# Doesn't use containers yet, so we need to reproduce the container.
 language: bash
 before_install:
 - echo $PWD
 # We need to install Ansible
-- yum clean all && \
-  yum -y install epel-release && \
-  yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
+- sudo apt-get clean all && apt-get update
+- sudo python-yaml python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
 - mkdir /etc/ansible/
 - echo '[local]\nlocalhost\n' > /etc/ansible/hosts
 - mkdir /opt/ansible/
