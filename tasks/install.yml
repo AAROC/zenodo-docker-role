@@ -1,0 +1,20 @@
+---
+- name: Install Invenio pip prerequisites
+  sudo: true
+  pip:
+    - name: {{ item }}
+    - state: present
+    - with_items:
+      - distribute
+      - supervisor
+
+- name: Install Invenio requirements from file
+  sudo: true
+  pip:
+    - requirements: 'requirements.txt'
+    - chdir: invenio
+
+- name: Installe Invenio extras from file
+  sudo: true
+  pip:
+    - requirements: 'requirement-extras.txt'

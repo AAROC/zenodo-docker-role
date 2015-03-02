@@ -9,3 +9,15 @@
     - generate_ssh_key: true
     - state: present
     - comment: "Ansible user created by ansible"
+
+- name: Create Apache user
+  sudo: true
+  sudo_user: root
+  user:
+    - name: apache
+    - uid: 1000
+    - system: yes
+    - state: present
+
+- name: Install prerequisites (CentOS)
+  yum: name={{ }}
