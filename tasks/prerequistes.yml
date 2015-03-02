@@ -10,6 +10,9 @@
     - state: present
     - comment: "Ansible user created by ansible"
 
+- name: Ensure that Ansible user can sudo
+  lineinfile: "dest=/etc/sudoers state=present regexp='^ansible' line='ansible ALL=(ALL) NOPASSWD: ALL'"
+  
 - name: Create Apache user
   sudo: true
   sudo_user: root
