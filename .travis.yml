@@ -17,7 +17,11 @@ env:
 install:
   - echo "$PWD" ; ls
   - echo $TRAVIS_BUILD_DIR
-  - cd $TRAVIS_BUILD_DIR
+  - cd $TRAVIS_BUILD_DIR/../
+  - cp $TRAVIS_BUILD_DIR/zenodo.yml .
+  - mkdir -p roles
+  - mv zenodo-docker-role roles/
+# We have to put all this stuff in the "roles"  directory
   - ansible-playbook -c local zenodo.yml
 notifications:
   email:
