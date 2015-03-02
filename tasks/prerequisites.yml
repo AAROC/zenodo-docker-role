@@ -12,7 +12,7 @@
 
 - name: Ensure that Ansible user can sudo
   lineinfile: "dest=/etc/sudoers state=present regexp='^ansible' line='ansible ALL=(ALL) NOPASSWD: ALL'"
-  
+
 - name: Create Apache user
   sudo: true
   sudo_user: root
@@ -23,13 +23,13 @@
     - state: present
 
 - name: Install prerequisites (CentOS)
-  yum: name={{ item }}
+  yum: "name={{ item }}"
   with_item:
-    - {{ invenio.yum_requirements }}
-  when: ansible_os_family == 'CentOS'
+    - "{{ invenio.yum_requirements }}"
+  when: ansible_os_family == 'RedHat'
 
 - name: Install prerequisites (Debian)
-  apt: name={{ item }}
+  apt: "name={{ item }}"
   with_item:
-    - {{ invenio.apt_requirements }}
+    - "{{ invenio.apt_requirements }}"
   when: ansible_os_family == 'Debian'
