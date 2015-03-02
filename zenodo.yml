@@ -1,0 +1,20 @@
+# A playbook to execute zenodo configuration inside a container
+# all connections are assumed to local
+---
+- name: Send message to Slack
+  action:
+    module: slack
+    domain: africa-arabia-roc.slack.com
+    token: 6EJfIMngdMiwrmnScAA4znB5
+    msg: "Configuring Zenodo on  {{ inventory_hostname }}"
+    channel: "#devops-site"
+    username: "Ansible on {{ inventory_hostname }}"
+    link_names: 0
+    parse: 'full'
+
+- name: Apply the Zenodo role
+  hosts: all
+  user: ansible
+  sudo: true
+  roles:
+    zenodo-docker-role
