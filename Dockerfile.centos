@@ -1,6 +1,6 @@
 # Docker file for Zenodo from
 # https://github.com/zenodo/zenodo/blob/master/INSTALL.rst
-FROM centos:6
+FROM centos:8
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
 # We prepare the machine for ansble
 RUN yum clean all && \
